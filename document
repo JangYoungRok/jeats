@@ -1,0 +1,29 @@
+모듈 설치
+npm istall multer
+
+템플릿에서  enctype=multipart/form-data
+
+Shops 모델 필드명 추가 : 이미지파일명
+
+미들웨어로 파일 처리
+upload.single --> req.file
+upload.array --> req.file[i]
+
+/tmp 폴더에 임시 저장 -> 지정된 폴더로 파일 이동
+ctrl 에서 req에서 file에 접근 가능
+
+실제 서비스에서는 이미지 파일이 과부하가 많기 때문에 이미지 서버를 별도로 관리하고
+보통 AWS S3로 관리 하고
+multerS3 모듈을 사용함
+
+CSRF
+Cross Site Request forgery
+
+패키지 설치
+npm install cookie-parser csurf
+
+보안
+crypto require('crypto')
+
+회원 가입
+accounts/
