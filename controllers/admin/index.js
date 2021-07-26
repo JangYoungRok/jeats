@@ -3,15 +3,15 @@ const router = Router();
 const ctrl = require('./admin.ctrl');
 const upload = require('../../middleware/multer')
 const csrfProtection = require('../../middleware/csrf')
+const loginRequired = require('../../middleware/loginRequired')
 
 //csrf 설정
-
-
 router.get('/shops', ctrl.get_shops);
+// router.use(loginRequired)
 
-router.get('/shops/write', csrfProtection, ctrl.get_shops_write);
+router.get('/shops/write' ,csrfProtection, ctrl.get_shops_write);
 
-router.post('/shops/write', upload.single('thumbnail'), csrfProtection, ctrl.post_shops_write);
+router.post('/shops/write' ,upload.single('thumbnail'), csrfProtection, ctrl.post_shops_write);
 
 router.get('/shops/detail/:id', ctrl.get_shops_detail);
 

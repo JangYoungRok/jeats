@@ -27,3 +27,39 @@ crypto require('crypto')
 
 회원 가입
 accounts/
+
+passport적용
+로그인 라이브러리
+node js 범용 라이브러리
+모듈 절치
+npm install express-session
+npm install passport
+npm install passport-local
+npm install connect-flash
+
+passport 적용순서
+1. 정책작성
+
+2. serializeUser, deserializeUse 작성
+ - 첫로그인시, 그 이후 조회시 사용
+
+3. router (POST, GET) 적용
+
+social Login
+Facebook login
+
+웹사이트에서 페이스북 로그인 클릭
+페이스북 인증 사이트에서 인증
+AcceccToken 및 Refresh Token 발생
+토큰으로 이메일 및 사용자 정보 요청
+페이스북에서 callbackUrl로 내 사이트로 다시 이동
+
+https://localhost:3000/auth/facebook/callback?code=AQDjStZmm8ufi7Dzw3nL9ny9xg7igb2TWXWIaH-Hp97Df2WVa84zIwX_gp0WZlihY6LHrJ8ME5h1XT-9uvgZJPJDrorK2DhfE845l1QbqiPZRLEzdYKWdbFK02B_ilZNk-J9jWRARVHiKMEqKArufgv62ReXXJ8G1Z6Ps4IGzrrbhthMiwXJpBkxAqggUA_VZ3uqNRuWPN_QTC99rqcT65SQvSFtGChS7Uyo9SmqVO_PjuSemeNfSf-02C0rJ8FFNm8kLNgTGmcVPr_3xhdptkw0LY7LOSOUM02JgQ6GQA8aQgK_6bdkvvAhGLunr4tCedtWRgGrdSim0-Wy5bZY9IZ6#_=_
+
+http// https
+let's encryt
+
+
+
+
+

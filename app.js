@@ -5,20 +5,31 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser')
 
 
+// Session 설정
+const flash = require('connect-flash')
+
+// passport 설정
+const passport = require('passport')
+const session = require('express-session')
+
+
 // db 관련
 const db = require('./models');
 
 
 class App {
 
-    constructor () {
+    constructor() {
         this.app = express();
 
         // db 접속
         this.dbConnection();
-        
+
         // 뷰엔진 셋팅
         this.setViewEngine();
+
+        // 세선 설정
+        this.setSession()
 
         // 미들웨어 셋팅
         this.setMiddleWare();
@@ -37,36 +48,53 @@ class App {
 
         // 에러처리
         this.errorHandler();
-
-
     }
 
-    dbConnection(){
+    dbConnection() {
         // DB authentication
         db.sequelize.authenticate()
-        .then(() => {
-            console.log('Connection has been established successfully.');
-            // return db.sequelize.sync();
-        })
-        .then(() => {
-            console.log('DB Sync complete.');
-        })
-        .catch(err => {
-            console.error('Unable to connect to the database:', err);
-        });
+            .then(() => {
+                console.log('Connection has been established successfully.');
+                return db.sequelize.sync();
+            })
+            .then(() => {
+                console.log('DB Sync complete.');
+            })
+            .catch(err => {
+                console.error('Unable to connect to the database:', err);
+            });
+    }
+
+    setSession() {
+        this.app.use(session({
+            secret: 'jeats',
+            resave: false,
+            saveUninitialized: true,
+            cookie: {
+                masAge: 2000 * 60 * 60
+            }
+            // 현재는 메모리 세션
+            // DB 세션이나 , 파일 세션 하려면 하단에
+            // store 설정
+        }))
+
+        this.app.use(passport.initialize())
+        this.app.use(passport.session())
+
+        this.app.use(flash())
     }
 
 
-    setMiddleWare (){
-        
+    setMiddleWare() {
+
         // 미들웨어 셋팅
         this.app.use(logger('dev'));
         this.app.use(bodyParser.json());
-        this.app.use(bodyParser.urlencoded({ extended: false }));
+        this.app.use(bodyParser.urlencoded({extended: false}));
         this.app.use(cookieParser())
     }
 
-    setViewEngine (){
+    setViewEngine() {
 
         nunjucks.configure('template', {
             autoescape: true,
@@ -76,27 +104,29 @@ class App {
     }
 
 
-    setStatic (){
+    setStatic() {
         this.app.use('/uploads', express.static('uploads'));
+        this.app.use('/static', express.static('static'))
     }
 
-    setLocals(){
+    setLocals() {
 
         // 템플릿 변수
-        this.app.use( (req, res, next) => {
-            this.app.locals.isLogin = true;
+        this.app.use((req, res, next) => {
+            this.app.locals.isLogin = req.isAuthenticated()
+            this.app.locals.currentUser = req.user
             this.app.locals.req_path = req.path;
             next();
         });
 
     }
 
-    getRouting (){
+    getRouting() {
         this.app.use(require('./controllers'))
     }
 
-    status404() {        
-        this.app.use( ( req , res, _ ) => {
+    status404() {
+        this.app.use((req, res, _) => {
             res.status(404).render('common/404.html')
         });
     }
@@ -106,9 +136,10 @@ class App {
         // this.app.use( (err, req, res,  _ ) => {
         //     res.status(500).render('common/500.html')
         // });
-    
+
     }
-f
+
+
 }
 
 module.exports = new App().app;
