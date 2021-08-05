@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a490797-40e8-4fc5-96f9-67a9018f03ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jeats.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/loginRequired.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/passport-facebook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/passport-local.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon_pointer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon_userPoint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/logo_symbol.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/search_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/thumb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/layout/client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/layout/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/shops-1626859232610.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/shops-1626938580296.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/shops-1626938823298.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/.env.sample" afterDir="false" />
+    <list default="true" id="3a490797-40e8-4fc5-96f9-67a9018f03ec" name="Default Changelist" comment="ch07 디자인파일 적용하기">
+      <change afterPath="$PROJECT_DIR$/controllers/cart/cart.ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/cart/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/chat/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/shops/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/shops/shops.ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/removeByValue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/socketConnection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/cart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/chat/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/chat/index_download.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/chat/index_nomember.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/shops/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/shops-1628125476832.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/accounts/accounts.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/accounts/accounts.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/accounts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/accounts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/admin/admin.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin.ctrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/document" beforeDir="false" afterPath="$PROJECT_DIR$/document" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/accounts/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/accounts/join.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/accounts/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/admin/shops.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/shops.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/layout/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/layout/client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/shops-1626683857780.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -83,10 +74,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -94,20 +85,14 @@
       <recent name="D:\study\fastcampus\jeats\static" />
       <recent name="D:\study\fastcampus\jeats\models" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\fastcampus\jeats\controllers\cart" />
+    </key>
   </component>
-  <component name="RunManager" selected="Node.js.test.js">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/controllers/accounts/index.js" working-dir="$PROJECT_DIR$/controllers/accounts">
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/controllers/accounts">
       <method v="2" />
     </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.index.js" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -126,8 +111,33 @@
       <workItem from="1626914130426" duration="24850000" />
       <workItem from="1627000414499" duration="3000" />
       <workItem from="1627001544968" duration="3000" />
-      <workItem from="1627263905775" duration="10215000" />
+      <workItem from="1627263905775" duration="20604000" />
+      <workItem from="1627370560811" duration="7000" />
+      <workItem from="1627434445511" duration="7000" />
+      <workItem from="1627436529978" duration="3000" />
+      <workItem from="1627439502415" duration="50000" />
+      <workItem from="1627452891809" duration="2000" />
+      <workItem from="1627456135965" duration="1062000" />
+      <workItem from="1627457252992" duration="884000" />
+      <workItem from="1627547464870" duration="1689000" />
+      <workItem from="1627604096375" duration="1858000" />
+      <workItem from="1628124633210" duration="16279000" />
     </task>
+    <task id="LOCAL-00001" summary="ch07 디자인파일 적용하기">
+      <created>1627275651074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627275651074</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ch07 디자인파일 적용하기">
+      <created>1627275669967</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627275669967</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,5 +160,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="ch07 디자인파일 적용하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="ch07 디자인파일 적용하기" />
   </component>
 </project>

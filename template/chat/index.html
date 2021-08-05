@@ -1,0 +1,103 @@
+{% set title ="채팅" %}
+{% extends "layout/base.html" %}
+{% block content %}
+
+<style>
+    .panel-default ul {
+        padding-left: 0px;
+    }
+
+    .panel-default ul li {
+        list-style: none;
+        padding-left: 0px;
+    }
+
+    .panel-default .panel-body {
+        min-height: 350px;
+        max-heigth: 350px;
+        overflow-y: scroll;
+    }
+
+    #chatWrap ul li strong::after {
+        content: " : ";
+    }
+
+    @media (max-width: 768px) {
+        #userWarp {
+            display: none;
+        }
+
+        #chatWrap .panel-body {
+            min-height: 250px;
+        }
+    }
+</style>
+<div class="row">
+    <div class="col-sm-10">
+        <div class="panel panel-default" id="chatWrap">
+            <div class="panel-heading">대화내용</div>
+            <div class="panel-body">
+                <ul id="chatBody"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="panel panel-default" id="userWrap">
+            <div class="panel-heading">User</div>
+            <div class="panel-body">
+                <ul id="userList"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <form action="" method="post" id="sendForm">
+        <div class="input-group">
+            <input type="hidden" name="socketId">
+            <input type="text" name="message" class="form-control" placeholder="대화내용을 입력해 주세요">
+            <span class="input-group-btn">
+      <button class="btn btn-primary">작성하기</button>
+    </span>
+        </div>
+    </form>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    let socket = io()
+
+    // let socket= io('https://url.com')
+
+    function updateUserList(userList) {
+        $('#userList').html("")
+        for (let key in userList) {
+            $('#userList').append('<li>' + userList[key] + '</li>')
+        }
+    }
+
+    socket.on('join', (data) => {
+        updateUserList(data)
+    })
+
+    socket.on('leave', (data) => {
+        updateUserList(data)
+    })
+
+    socket.on('server message', function (data) {
+        // $('#chatBody').append('<li>'+ '<strong>'+ data.displayname +'</storng> ' + data.message + '</li>')
+        $('#chatBody').append('<li>' + '<strong>' + data.displayname + '</strong>' + data.message + '</li>')
+    })
+
+    $(document).ready(function () {
+        $('#sendForm').submit(function () {
+            let message = $('#sendForm input[name=message]')
+            // console.log(`client : ${ message.val() }`)
+            socket.emit('client message', {message: message.val()})
+            message.val('')
+            return false
+        })
+    })
+
+</script>
+
+
+{% endblock %}

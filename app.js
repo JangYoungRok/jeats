@@ -55,7 +55,7 @@ class App {
         db.sequelize.authenticate()
             .then(() => {
                 console.log('Connection has been established successfully.');
-                return db.sequelize.sync();
+                // return db.sequelize.sync();
             })
             .then(() => {
                 console.log('DB Sync complete.');
@@ -66,18 +66,25 @@ class App {
     }
 
     setSession() {
-        this.app.use(session({
+        const SequelizeStore = require('connect-session-sequelize')(session.Store)
+
+        this.app.sessionMiddleWare = session({
             secret: 'jeats',
             resave: false,
             saveUninitialized: true,
             cookie: {
                 masAge: 2000 * 60 * 60
-            }
+            },
+            store: new SequelizeStore({
+                db: db.sequelize
+            })
             // 현재는 메모리 세션
             // DB 세션이나 , 파일 세션 하려면 하단에
             // store 설정
-        }))
+        })
 
+
+        this.app.use(this.app.sessionMiddleWare)
         this.app.use(passport.initialize())
         this.app.use(passport.session())
 

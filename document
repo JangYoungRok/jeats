@@ -60,6 +60,30 @@ http// https
 let's encryt
 
 
+단방향
+클라이언트가 setInterval로 지속적으로 체크
+단점
+인터벌 타임의 간극만큼 데이터 원활이 오지 않음
+리소스 낭비
+
+양방향
+event Listing 방식
+
+채팅기능
+var socket = io()
+서버와 연결관계를 맺음
+서버 event emit
+전체 클라이언트에 전달
+
+
+socket.emit ----------> socket.on
+
+장바구니 구현
+
+담기구현
+var cartList = JSON.parse('cartList')
+
+setCookieHour(JSON.stringify(cartList), 3 )
 
 
 

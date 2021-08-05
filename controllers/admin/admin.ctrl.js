@@ -42,6 +42,8 @@ exports.get_shops_detail = async (req, res) => {
             },
             include: ['Menu']
         })
+
+        console.log(shop)
         res.render('admin/detail.html', {shop});
 
     } catch (e) {
