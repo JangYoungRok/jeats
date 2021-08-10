@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a490797-40e8-4fc5-96f9-67a9018f03ec" name="Default Changelist" comment="장바구니 구현" />
+    <list default="true" id="3a490797-40e8-4fc5-96f9-67a9018f03ec" name="Default Changelist" comment="장바구니 구현">
+      <change afterPath="$PROJECT_DIR$/.sequelizerc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/migrations/20210806081610-shops-add-geo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/migrations/20210806082405-checkout-change-paid-amount.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/checkout/checkout.ctrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/checkout/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/kakaomap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/admin/order_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/checkout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/checkout/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/shops-1628581474328.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/.env.sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat.values" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat_i" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0af585c2-4b5d-443e-b372-d580958f63c8/entities/entities.dat_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/admin.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/shops/shops.ctrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/shops/shops.ctrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/document" beforeDir="false" afterPath="$PROJECT_DIR$/document" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Shops.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Shops.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ShopsMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ShopsMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/admin/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/cart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/cart/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/layout/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/layout/client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/shops/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/shops/detail.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -44,7 +81,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../과제/uumtv" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
@@ -52,6 +89,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\fastcampus\jeats\models_bak" />
       <recent name="D:\study\fastcampus\jeats\static" />
       <recent name="D:\study\fastcampus\jeats\models" />
     </key>
@@ -91,7 +129,11 @@
       <workItem from="1627457252992" duration="884000" />
       <workItem from="1627547464870" duration="1689000" />
       <workItem from="1627604096375" duration="1858000" />
-      <workItem from="1628124633210" duration="16585000" />
+      <workItem from="1628124633210" duration="21292000" />
+      <workItem from="1628221838784" duration="19903000" />
+      <workItem from="1628341347939" duration="1937000" />
+      <workItem from="1628567519894" duration="6000" />
+      <workItem from="1628574983676" duration="6716000" />
     </task>
     <task id="LOCAL-00001" summary="ch07 디자인파일 적용하기">
       <created>1627275651074</created>
@@ -121,7 +163,28 @@
       <option name="project" value="LOCAL" />
       <updated>1628146514482</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="장바구니 구현">
+      <created>1628146538478</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628146538478</updated>
+    </task>
+    <task id="LOCAL-00006" summary="장바구니 구현">
+      <created>1628146591179</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628146591179</updated>
+    </task>
+    <task id="LOCAL-00007" summary="장바구니 구현">
+      <created>1628146651715</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628146651715</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +192,16 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -145,6 +218,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="ch07 디자인파일 적용하기" />
+    <MESSAGE value="장바구니 구현 합니다" />
     <MESSAGE value="장바구니 구현" />
     <option name="LAST_COMMIT_MESSAGE" value="장바구니 구현" />
   </component>

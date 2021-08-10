@@ -19,9 +19,21 @@ exports.get_shops_write = (req, res) => {
 }
 
 exports.post_shops_write = async (req, res) => {
+    // req.body.geo = 경도, 위도
+    // mysql pointer type
+
+
 
     try {
-        console.log(req.file)
+        req.body.geo = {
+            type: 'Point',
+            coordinates:[
+                req.body.geo.split(',')[0],
+                req.body.geo.split(',')[1]
+            ]
+        }
+
+        // console.log(req.file)
         req.body.thumbnail = (req.file) ? req.file.filename : ''
         await models.Shops.create(req.body);
         res.redirect('/admin/shops');
@@ -130,6 +142,26 @@ exports.remove_menu = async (req, res) => {
         })
         res.redirect('/admin/shops/detail/' + req.params.shop_id)
     } catch (e) {
+
+    }
+}
+
+exports.get_order = async (req, res) =>{
+    const checkouts = await models.Checkout.findAll()
+    res.render('admin/order.html', { checkouts })
+}
+
+exports.get_order_edit = async (req, res) =>{
+    try{
+        const checkout = await models.Checkout.findOne({
+            where :{
+                id : req.params.id
+            },
+            include : ['Menu', 'Shop']
+        })
+
+        res.render('admin/order_edit.html', { checkout })
+    }catch(e){
 
     }
 }

@@ -1,7 +1,7 @@
 {% set title = "쇼핑몰 : 장바구니" %}
 {% extends "layout/client.html" %}
 
-{% block content -%}
+{% block content %}
 <main class="container">
     <h3 className="page-header" style="margin: 20px 0">장바구니</h3>
     <table class="table table-bordered table-hover">
@@ -37,21 +37,20 @@
 </main>
 
 <script>
-    $(document).ready(function(){
-        $(".delCart").click(function(e){
+    $(document).ready(function () {
+        $(".delCart").click(function (e) {
             e.preventDefault()
-            if(confirm('삭제하시겠습니까?')){
+            if (confirm('삭제하시겠습니까?')) {
                 const menu_id = parseInt($(this).attr('menu_id'))
                 console.log(menu_id)
                 let cartList = {}
-                if(getCookie('cartList')){
+                if (getCookie('cartList')) {
                     cartList = JSON.parse(getCookie('cartList'))
                     delete cartList[menu_id]
                     setCookieHour('cartList', JSON.stringify(cartList), 3)
                     document.location.href = '/cart'
                 }
             }
-
         })
     })
 </script>

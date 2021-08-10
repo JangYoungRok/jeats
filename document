@@ -86,4 +86,34 @@ var cartList = JSON.parse('cartList')
 setCookieHour(JSON.stringify(cartList), 3 )
 
 
+checkout 모델구조 짜기
+Checkout.js
+
+CheckoutMany
+
+ShopsMenu => ManyToMany logical 관곈는 교차 테이블이 생성
+Shops => OneToOne
+
+POST /checkout/complete
+{
+   "imp_uid" : "imp_123123312123",
+   "merchant_uid" : "merchant_150220058123123",
+   "paid_amount" : 12000,
+   "apply_num" : "11389409123",
+
+   "buyer_email" : "abc@abc.com",
+   "buyer_name" : "테스트",
+   "buyer_tel" : "01010011234",
+   "buyer_addr" : "서울시 강남구 / 신사역",
+   "buyer_postcode" : "06120",
+
+   "shop_id" : 3,
+   "menuArray" : [1,3] ,
+   "status" : "결재완료"
+}
+
+table alter
+sequelize migration
+
+npx sequelize-cli init
 

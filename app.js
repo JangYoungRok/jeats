@@ -55,7 +55,11 @@ class App {
         db.sequelize.authenticate()
             .then(() => {
                 console.log('Connection has been established successfully.');
+                // return db.sequelize.drop();
                 // return db.sequelize.sync();
+
+
+
             })
             .then(() => {
                 console.log('DB Sync complete.');
@@ -123,6 +127,13 @@ class App {
             this.app.locals.isLogin = req.isAuthenticated()
             this.app.locals.currentUser = req.user
             this.app.locals.req_path = req.path;
+            this.app.locals.map_api = {
+                KAKAO_JAVASCRIPT_KEY : process.env.KAKAO_JAVASCRIPT_KEY,
+                default : {
+                    lat : process.env.DEFAULT_LATITUDE,
+                    lng : process.env.DEFAULT_LONGITUDE
+                }
+            }
             next();
         });
 
